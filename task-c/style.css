@@ -6,17 +6,20 @@ Date: 03-10-2025
 img{
     width: 100%;
     max-width: 500px;
-    justify-content: center;
-    margin-right: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2rem;
 }
 audio{
-    justify-content: center;
-    margin-right: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2rem;
 }
 video{
-    justify-content: center;
-    margin-right: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2rem;
 }
