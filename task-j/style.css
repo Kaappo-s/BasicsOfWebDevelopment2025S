@@ -1,0 +1,60 @@
+/*
+Author: Kaappo Talvitie
+Date: 04.12.2025
+*/
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+body {
+  background-image: url('https://raw.githubusercontent.com/vheikkiniemi/BasicsOfWebDevelopment2025S/refs/heads/main/Assignments/example.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+
+p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "menu content";
+  grid-template-columns: 0fr 7fr;
+  gap: 3px;
+  background-color: rgb(0, 0, 0);
+  padding: 1px;
+}
+.container div {
+  background-image: linear-gradient(to bottom, rgb(21, 24, 163), white);
+  padding: 2px;
+}
+.container div.menu {
+  grid-area: menu;
+}
+.container div.content {
+  grid-area: content;
+}
+
+
+h3{
+    font-size: 30px; 
+}
+
+select{
+    font-size: 20px;
+}
+
+p2{
+    font-size: 25px;
+    font-weight: bold;
+}
+footer{
+    background-color: white;
+}
+
