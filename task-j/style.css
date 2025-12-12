@@ -3,6 +3,8 @@ Author: Kaappo Talvitie
 Date: 04.12.2025
 */
 
+a {font-size: 30px}
+
 h1{
     font-size: 50px;
     text-align: center;
@@ -53,8 +55,5 @@ select{
 p2{
     font-size: 25px;
     font-weight: bold;
-}
-footer{
-    background-color: white;
 }
 
