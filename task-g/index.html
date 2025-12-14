@@ -1,0 +1,91 @@
+<!--
+Author: Kaappo Talvitie
+Date: 14.12.2025
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Weekly Timetable</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+<script type="text/javascript" src="moz-extension://f31a5b72-2a4a-4a94-84a5-3de25ce5e9ae/content/workaround.js"></script></head>
+
+<body>
+  <!--
+    Author: Ville Heikkiniemi
+    Date: 2025-10-06
+  -->
+
+  <header class="site-header">
+    <h1>Registeration page</h1>
+  </header>
+
+  <main class="content">
+    <!-- Top row split into two blocks -->
+    <div class="top-grid">
+      <!-- Student info (30%) -->
+      <section class="student-info" aria-label="Student information">
+        <h2 class="student-info-title">Information</h2>
+        <p><span class="student-name">Your Name</span></p>
+        <p><span class="student-group">Group number</span></p>
+      </section>
+
+      <!-- Controls (70%): add course + day marks -->
+      <section class="controls" aria-label="Add course row">
+        <h2 class="controls-title">Add Course</h2>
+
+        <form id="addCourseForm">
+          <div class="form-row">
+            <label for="courseName">Course name</label>
+            <input id="courseName" name="courseName" type="text" required="" placeholder="e.g., Web Development Basics">
+          </div>
+
+          <fieldset class="days-group">
+            <legend>Days (yes = ✅, no = ❌)</legend>
+            <label><input type="checkbox" name="day" value="Tue"> Tue</label>
+            <label><input type="checkbox" name="day" value="Thu"> Thu</label>
+          </fieldset>
+        <div class ="information">
+        <label for="nimi">Nimesi</label><br>
+        <input id="studentName" name="studentName" type="text" required  oninvalid="this.setCustomValidity('Oma nimi')" pattern="^(\w\w+)\s(\w+)$"> <br>            
+        <label for="email">Email</label><br>
+        <input id="email" name="email" type="email" required  oninvalid="this.setCustomValidity('Muistithan laittaa oman sähköpostiosoitteen')"><br>
+        <label for="pnumero">Puhelinnumero</label><br>
+        <input id="pnumero" name="pnumero" type="tel" maxlength="10" required oninvalid="this.setCustomValidity('Oma Puhelinnumero maksimi pituus on 10 merkkiä')"><br>
+        <label for="späivä">Syntymäpäivä</label><br>
+        <input id="späivä" name="späivä" type="date" required max="2025-12-14"><br>
+        <label for="ehdot">Hyväksytkö käyttöehdot?</label><br>
+        <input id="ehdot" name="ehdot" type="checkbox" required oninvalid="this.setCustomValidity('Pakko hyväksyä ehdot')"><br>
+        </div>
+          <div class="form-row">
+            <button id="addRowBtn" type="submit" class="btn">Add row</button>
+            <button id="clearBtn" type="reset" class="btn btn-secondary">Clear</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- Table -->
+    <div class="table-wrap">
+      <table class="table" id="timetable">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Päiväys</th>
+            <th>Nimi</th>
+            <th>sähköpostiosoite</th>
+            <th>Puhelinnumero</th>
+            <th>Syntymäpäivä</th>
+            <th>Tiistai</th>
+            <th>Torstai</th>
+            <th>Ehdot</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+
+
+</body>
